@@ -1,0 +1,57 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual envs
+.env
+.venv/
+venv/
+ENV/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Data, models, outputs (large/binary)
+data/
+database_db/
+output/
+models/
+
+# Databases and caches
+*.db
+**/cache/
+**/.insightface/
+**/huggingface/
+
+# Logs / temp
+*.log
+*.tmp
+*.bak
+*~
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Images and videos produced at runtime
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.webm
+*.flv
+*.wmv
+*.jpg
+*.jpeg
+*.png
+*.bmp
+*.webp
+
+# Keep docs/assets committed
+!docs/
+!docs/**
+
+# Library outputs
+lib/output/

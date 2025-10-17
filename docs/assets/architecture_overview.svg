@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="600" viewBox="0 0 1080 600">
+  <defs>
+    <style>
+      .box { fill:#f5f7fb; stroke:#3a5a9f; stroke-width:2; }
+      .title { font: 700 18px Arial, Helvetica, sans-serif; fill:#1b2a4a; }
+      .text { font: 400 14px Arial, Helvetica, sans-serif; fill:#1b2a4a; }
+      .arrow { stroke:#666; stroke-width:2; marker-end:url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+    </marker>
+  </defs>
+
+  <!-- Streamlit WebApp -->
+  <rect class="box" x="40" y="40" width="300" height="160" rx="10" ry="10"/>
+  <text class="title" x="60" y="70">Streamlit WebApp (src/sentinel.py)</text>
+  <text class="text" x="60" y="100">- Dashboard / Upload & Process</text>
+  <text class="text" x="60" y="120">- Manage Profiles / Analytics</text>
+  <text class="text" x="60" y="140">- Live Detection / Documentation</text>
+
+  <!-- DatabaseManager -->
+  <rect class="box" x="420" y="40" width="300" height="120" rx="10" ry="10"/>
+  <text class="title" x="440" y="70">DatabaseManager (lib/database.py)</text>
+  <text class="text" x="440" y="100">CRUD: profiles, encodings, detections</text>
+  <text class="text" x="440" y="120">Merge / Reassign / Delete helpers</text>
+
+  <!-- FaceDetector -->
+  <rect class="box" x="420" y="200" width="300" height="140" rx="10" ry="10"/>
+  <text class="title" x="440" y="230">FaceDetector (lib/face_detector.py)</text>
+  <text class="text" x="440" y="255">InsightFace FaceAnalysis (buffalo_l)</text>
+  <text class="text" x="440" y="275">Outputs: bbox, kps, pose, age/gender,</text>
+  <text class="text" x="440" y="295">embedding, det score</text>
+
+  <!-- FaceAnalyzer -->
+  <rect class="box" x="420" y="370" width="300" height="120" rx="10" ry="10"/>
+  <text class="title" x="440" y="400">FaceAnalyzer (lib/face_analyzer.py)</text>
+  <text class="text" x="440" y="430">DeepFace: age, gender, race (optional)</text>
+  <text class="text" x="440" y="450">Batch/on-demand enrichment</text>
+
+  <!-- SQLite DB -->
+  <rect class="box" x="800" y="40" width="240" height="120" rx="10" ry="10"/>
+  <text class="title" x="820" y="70">SQLite (database_db)</text>
+  <text class="text" x="820" y="100">profiles / face_encodings</text>
+  <text class="text" x="820" y="120">detections (image_path)</text>
+
+  <!-- File storage -->
+  <rect class="box" x="800" y="200" width="240" height="120" rx="10" ry="10"/>
+  <text class="title" x="820" y="230">File Storage</text>
+  <text class="text" x="820" y="255">added_faces/ snapshots</text>
+  <text class="text" x="820" y="275">models cache (INSIGHTFACE_HOME)</text>
+
+  <!-- Arrows -->
+  <line class="arrow" x1="340" y1="120" x2="420" y2="100" />
+  <line class="arrow" x1="340" y1="120" x2="420" y2="240" />
+  <line class="arrow" x1="340" y1="120" x2="420" y2="420" />
+  <line class="arrow" x1="720" y1="90" x2="800" y2="90" />
+  <line class="arrow" x1="720" y1="260" x2="800" y2="260" />
+  <line class="arrow" x1="720" y1="430" x2="800" y2="260" />
+  <line class="arrow" x1="800" y1="120" x2="420" y2="120" />
+
+  <!-- Legend -->
+  <text class="text" x="40" y="560">Legend: UI triggers detection/matching; DB stores profiles/encodings/detections; snapshots saved to added_faces; DeepFace demographics optional.</text>
+</svg>

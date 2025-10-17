@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360">
+  <defs>
+    <style>
+      .box { fill:#fff7e6; stroke:#c77d00; stroke-width:2; rx:8; ry:8; }
+      .title { font: 700 16px Arial; fill:#5a3a00; }
+      .text { font: 400 13px Arial; fill:#5a3a00; }
+      .arrow { stroke:#c77d00; stroke-width:2; marker-end:url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#c77d00" />
+    </marker>
+  </defs>
+
+  <rect class="box" x="40" y="60" width="220" height="120"/>
+  <text class="title" x="60" y="90">Query Embedding</text>
+  <text class="text" x="60" y="115">vector q in R^d</text>
+
+  <rect class="box" x="340" y="40" width="240" height="80"/>
+  <text class="title" x="360" y="70">Known Encodings</text>
+  <text class="text" x="360" y="95">E = {e_i} for profiles</text>
+
+  <rect class="box" x="340" y="160" width="240" height="120"/>
+  <text class="title" x="360" y="190">Cosine Similarity</text>
+  <text class="text" x="360" y="215">s_i = (q·e_i)/(|q||e_i|)</text>
+  <text class="text" x="360" y="235">best = argmax s_i</text>
+
+  <rect class="box" x="640" y="60" width="220" height="80"/>
+  <text class="title" x="660" y="90">Match if s_best > τ</text>
+  <text class="text" x="660" y="115">τ ≈ 0.2 (empirical)</text>
+
+  <line class="arrow" x1="260" y1="120" x2="340" y2="80" />
+  <line class="arrow" x1="260" y1="120" x2="340" y2="220" />
+  <line class="arrow" x1="580" y1="200" x2="640" y2="100" />
+
+  <text class="text" x="40" y="320">Note: Keep E in memory for speed; refresh cache on enroll/merge. For unknowns, store q if not near-duplicate.</text>
+</svg>

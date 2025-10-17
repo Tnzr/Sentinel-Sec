@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="420" viewBox="0 0 1080 420">
+  <defs>
+    <style>
+      .box { fill:#eef6ff; stroke:#2d6cdf; stroke-width:2; rx:8; ry:8; }
+      .title { font: 700 16px Arial; fill:#0f2a5f; }
+      .text { font: 400 13px Arial; fill:#0f2a5f; }
+      .arrow { stroke:#2d6cdf; stroke-width:2; marker-end:url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2d6cdf" />
+    </marker>
+  </defs>
+
+  <rect class="box" x="40" y="80" width="200" height="120"/>
+  <text class="title" x="60" y="110">Input</text>
+  <text class="text" x="60" y="135">- Image</text>
+  <text class="text" x="60" y="155">- Video (sampled)</text>
+
+  <rect class="box" x="280" y="80" width="220" height="120"/>
+  <text class="title" x="300" y="110">Detect + Embed</text>
+  <text class="text" x="300" y="135">InsightFace FaceAnalysis</text>
+  <text class="text" x="300" y="155">bbox, pose, age/gender, emb</text>
+
+  <rect class="box" x="540" y="80" width="220" height="120"/>
+  <text class="title" x="560" y="110">Match</text>
+  <text class="text" x="560" y="135">Cosine similarity vs DB</text>
+  <text class="text" x="560" y="155">threshold ~ 0.2</text>
+
+  <rect class="box" x="800" y="40" width="240" height="80"/>
+  <text class="title" x="820" y="70">Known</text>
+  <text class="text" x="820" y="95">Annotate with DB G/A/E</text>
+
+  <rect class="box" x="800" y="160" width="240" height="120"/>
+  <text class="title" x="820" y="190">Unknown</text>
+  <text class="text" x="820" y="215">Optional auto-enroll</text>
+  <text class="text" x="820" y="235">Duplicate-unknown check</text>
+
+  <line class="arrow" x1="240" y1="140" x2="280" y2="140" />
+  <line class="arrow" x1="500" y1="140" x2="540" y2="140" />
+  <line class="arrow" x1="760" y1="140" x2="800" y2="80" />
+  <line class="arrow" x1="760" y1="140" x2="800" y2="220" />
+
+  <text class="text" x="40" y="330">Optional Demographics: DeepFace batch/on-demand to enrich ethnicity once per profile (not per frame).</text>
+</svg>

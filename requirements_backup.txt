@@ -1,0 +1,31 @@
+# Core web UI
+streamlit
+
+# OpenCV: install only ONE wheel. Keep contrib for SIFT/extra modules and full video IO
+opencv-contrib-python
+
+# Numeric & plotting stack (pins avoid ABI issues with ORT 1.16 and InsightFace 0.7.x)
+numpy==1.26.4
+scipy==1.11.4
+matplotlib==3.8.4
+pandas
+plotly
+seaborn
+Pillow
+
+# InsightFace + ONNX stack (compatible pins)
+insightface==0.7.3
+onnx==1.16.1
+protobuf==4.25.3
+huggingface_hub>=0.24.0
+
+# IMPORTANT: Choose exactly ONE runtime below and install it manually to match your environment
+# CPU-only runtime (no NVIDIA CUDA required):
+# onnxruntime==1.16.0
+# GPU runtime (requires NVIDIA driver + CUDA 11.8 + cuDNN available to the wheel):
+# onnxruntime-gpu==1.16.0
+
+# Notes:
+# - Do NOT install both onnxruntime and onnxruntime-gpu together.
+# - On Linux, ensure system libs are present for OpenCV display/video: libgl1, libgtk-3-0, ffmpeg or GStreamer.
+# - If using conda/mamba, prefer: create env with Python 3.10, then pip install with --prefer-binary.
