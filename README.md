@@ -146,9 +146,8 @@ git push -u origin main
 - InsightFace assets are cached under `models/`. The app sets `INSIGHTFACE_HOME`, `ONNX_HOME`, and `HUGGINGFACE_HUB_CACHE` to keep downloads local to the project.
 - Calibration and some deeper analytics are WIP; placeholders exist in code.
 
-## Acknowledgements
-- [InsightFace](https://github.com/deepinsight/insightface)
-- Streamlit
+## Contributing
+See `CONTRIBUTING.md` for guidelines on reporting issues and submitting PRs.
 
 ## License
-Add a LICENSE file (e.g., MIT) before publishing.
+This project is licensed under the MIT License. See the `LICENSE` file for details.
